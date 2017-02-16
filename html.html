@@ -1,0 +1,157 @@
+<html>
+
+<head>
+    <title>Digital Watch</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style media="screen">
+        main.main-wrapper {
+            margin: 50px auto;
+        }
+
+        main.main-wrapper .contu {
+            background: black;
+            color: #ff5e5e;
+            max-width: 750px;
+            border: 8px solid #ff5e5e;
+            border-radius: 20px;
+            padding: 20px 0;
+        }
+
+        main.main-wrapper .time {
+            font-size: 200px;
+        }
+
+        main.main-wrapper .days {
+            font-size: 60px;
+        }
+
+        .btns {
+            margin: 20px 0;
+            width: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            var CurrentDate = new Date();
+            console.log(CurrentDate);
+            var CurrentHours = CurrentDate.getHours();
+            var CuMin = CurrentDate.getMinutes();
+            var CurDay = CurrentDate.getDay();
+            $('#hours').append(CurrentHours);
+            $('#munites').append(CuMin);
+            switch (CurDay) {
+                case 0:
+                    $('#day').append("Sunday");
+                    break;
+
+                case 1:
+                    $('#day').append("Monday");
+                    break;
+
+                case 2:
+                    $('#day').append("Tuesday");
+                    break;
+
+                case 3:
+                    $('#day').append("Wednesday");
+                    break;
+
+                case 4:
+                    $('#day').append("Thursday");
+                    break;
+
+                case 5:
+                    $('#day').append("Friday");
+                    break;
+
+                default:
+                    $('#day').append("Saturday");
+            }
+
+            var dates = CurrentDate.getDate()
+            $('#date').append(dates);
+            var months = CurrentDate.getMonth();
+            switch (months) {
+                case 0:
+                    $('#month').append("Jan");
+                    break;
+
+                case 1:
+                    $('#month').append("Feb");
+                    break;
+
+                case 2:
+                    $('#month').append("Mar");
+                    break;
+
+                case 3:
+                    $('#month').append("Apr");
+                    break;
+
+                case 4:
+                    $('#month').append("May");
+                    break;
+
+                case 5:
+                    $('#month').append("June");
+                    break;
+
+                case 6:
+                    $('#month').append("July");
+                    break;
+
+                case 7:
+                    $('#month').append("Aug");
+                    break;
+
+                case 8:
+                    $('#month').append("Sep");
+                    break;
+
+                case 9:
+                    $('#month').append("Oct");
+                    break;
+
+                case 10:
+                    $('#month').append("Nov");
+                    break;
+
+                default:
+                    $('#month').append("Dec");
+            }
+
+            var years = CurrentDate.getFullYear()
+            $('#year').append(years);
+
+        })
+    </script>
+</head>
+
+<body>
+    <main class="main-wrapper text-center">
+        <div class="container contu">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <p class="time">
+                        <span id="hours"></span>:<span id="munites"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <p class="days">
+                        <span id="day"></span>
+                        <span id="date"></span>-<span id="month"></span>-<span id="year"></span>
+                    </p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
