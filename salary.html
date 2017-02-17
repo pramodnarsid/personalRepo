@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Salary Sructure</title>
+    <script type="text/javascript" src="js/salary.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style media="screen">
+        .max-width {
+            max-width: 600px;
+            margin-top: 30px;
+        }
+
+        .heading {
+            text-align: center;
+            padding: 26px;
+            background: #fff2f2;
+        }
+        .total {
+          font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container max-width">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="heading" colspan="3">Offer Letter</th>
+                </tr>
+                <tr>
+                    <th>Salary Structure</th>
+                    <th>Monthly</th>
+                    <th>Yearly</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic Pay</td>
+                    <td id="month_basic"></td>
+                    <td id="year_basic"></td>
+                </tr>
+                <tr>
+                    <td>HRA</td>
+                    <td id="month_hra"></td>
+                    <td id="year_hra"></td>
+                </tr>
+                <tr>
+                    <td>PF</td>
+                    <td id="month_pf"></td>
+                    <td id="year_pf"></td>
+                </tr>
+                <tr>
+                    <td>GR</td>
+                    <td id="month_gr"></td>
+                    <td id="year_gr"></td>
+                </tr>
+                <tr class="total">
+                    <td>Total</td>
+                    <td id="month_SalaryPay"></td>
+                    <td id="year_SalaryPay"></td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="number" name="" class="form-control" id="pay" value="" placeholder="Type Annual Salary">
+        <br>
+        <button type="button" name="button" class="form-control btn-danger" onclick="BasicSalary()">Check</button>
+
+        <button type="button" name="button" class="form-control btn-danger" onclick="empDetails()">get details</button>
+        <table>
+            <thead>
+                <th>Emp ID</th>
+                <th>Emp Name</th>
+                <th>Emp Designation</th>
+            </thead>
+            <tbody id="tdata"></tbody>
+        </table>
+    </div>
+</body>
+
+</html>
